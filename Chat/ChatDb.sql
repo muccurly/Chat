@@ -1,0 +1,27 @@
+use ChatDb;
+DROP TABLE IF EXISTS Cookies;
+DROP TABLE IF EXISTS  Users; 
+Create Table Users(
+UserID BIGINT IDENTITY(1,1) NOT NULL,
+UserName NVARCHAR(60) NOT NULL,
+Email NVARCHAR(120) NOT NULL,
+Password NVARCHAR(30)NOT NULL,
+DateCreated date not null,
+Verified BIT DEFAULT 0,
+Token VARCHAR(120) NULL,
+CONSTRAINT PK_Users PRIMARY KEY(UserID),
+CONSTRAINT UC_Users_Email UNIQUE (Email)
+);
+DROP INDEX IF EXISTS IX_Users_Email ON Users;
+CREATE UNIQUE INDEX IX_Users_Email ON Users(Email); 
+
+
+CREATE TABLE Cookies(
+CookieID VARCHAR(120) NOT NULL,
+UserID BIGINT NOT NULL,
+CONSTRAINT PK_Cookies PRIMARY KEY(CookieID),
+CONSTRAINT FK_UserCookie FOREIGN KEY(UserID) REFERENCES Users(UserID) 
+);
+
+use ChatDb;
+Select  * from Users;

@@ -1,0 +1,25 @@
+
+
+Date:2020-08-29 14:07:29,043
+Thread:[1]
+Level:ERROR
+Logger:Syncfusion.Xamarin.UI.WizardImplementation                         [(null)]
+Message:System.ArgumentException: Directory 'c:\users\miras\appdata\local\microsoft\visualstudio\16.0_c8f322b8\extensions\uwuz0voc.ysb\Resources\Android\BorderlessEditorRenderer.cs' does not exist.
+   в Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.Automation.OAProjectItems.<>c__DisplayClass5_0.<<AddFromDirectory>b__0>d.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.Automation.OAProject.<>c__DisplayClass72_0`1.<<Mutate>b__0>d.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.ProjectNode.<>c__DisplayClass565_0.<<Mutate>b__0>d.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   в System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   в Microsoft.VisualStudio.Threading.JoinableTask.CompleteOnCurrentThread()
+   в Microsoft.VisualStudio.ProjectSystem.ProjectMultiThreadedService.ExecuteSynchronously(Func`1 asyncAction)
+   в Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.ProjectNode.Mutate(Func`1 asyncAction, Boolean includesFileSystemChange, String telemetryActivity)
+   в Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.Automation.OAProject.Mutate[T](Func`1 asyncAction, Boolean includesFileSystemChange, String telemetryActivity)
+   в Microsoft.VisualStudio.ProjectSystem.VS.Implementation.Package.Automation.OAProjectItems.AddFromDirectory(String directory)
+   в Syncfusion.Xamarin.UI.WizardImplementation.AddFlies(String[] fileName, String projectType)
