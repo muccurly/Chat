@@ -1,1 +1,1 @@
-Chat by c#
+Chat by c# and client by Xamarin
